@@ -17,7 +17,7 @@ Install my-project with npm
 
 ## Enviroment Variables
 
-    for this project i will leave the .env files shared
+    You will need 3 env variables if you want to download it, REACT_APP_API_URL for the front, and SV_PORT and DATABASE_URL for the back :)
 
 ## 🔗 Links
 
