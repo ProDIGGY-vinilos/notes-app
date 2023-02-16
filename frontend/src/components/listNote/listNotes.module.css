@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.notesContainer {
+  margin-top: 10px;
+  width: 90%;
+}
+
+.notesContainer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.notes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 49%;
+  height: 100px;
+}
+
+.noteIconText {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  height: 100px;
+  width: 450px;
+}
+
+.noteIcon {
+  width: 85px;
+  height: 85px;
+  margin: 10px;
+}
+
+.noteText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.noteText > p {
+  margin: 0;
+  padding: 0;
+}
+
+.noteText > p:first-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.noteText > p:last-child {
+  font-size: 15px;
+  height: 55px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.noteBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100px;
+}
+
+.noteBtn button,
+.noteBtn a {
+  width: 33%;
+  height: 100%;
+  border: 0px;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  color: #000000;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.noteBtn button:hover,
+.noteBtn a:hover {
+  color: #0d6efd;
+}
+
+.notes:hover {
+  color: #29014b;
+  background-color: #f5f5f5;
+}
