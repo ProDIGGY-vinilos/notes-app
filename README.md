@@ -1,5 +1,7 @@
 # How to start this project
 
+## Test it <b>[online](https://notes-app-prodiggy.netlify.app/notes)</b> with the backend and DB done by me (:
+
 <ol>
      <li>Open a console in root directory (note-app)</li>
      <li>Exec the command "npm i" (this will install all the depoendencies)</li>
@@ -22,7 +24,11 @@ Install my-project with npm
     (**FOR LOCAL TEST**)
     Create .env in both dirs (frontend and backend)
     1- In the frontend/.env paste this variable: REACT_APP_API_URL="http://localhost:4000"
-    2- In the backend/.env you will need to create the db in MySql, find the .sql file and load it in your local machine, generate the mysql URL after that add that URL into DATABASE_URL="yourURL"
+    2- In the backend/.env you will need to create the db in MySql
+        2.1- Find the .sql file
+        2.2- Load it in your local MySqlServer
+        2.3- Get the mysql URL
+        2.4- After that add that URL into DATABASE_URL="yourURL"
 
 ## 🔗 Links
 
