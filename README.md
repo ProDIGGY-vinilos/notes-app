@@ -1,7 +1,7 @@
 # How to start this project
 
 <ol>
-     <li>Open a console in root directory (ENSOLVERS CHALLENGE)</li>
+     <li>Open a console in root directory (note-app)</li>
      <li>Exec the command "npm i" (this will install all the depoendencies)</li>
      <li>Exec the commando "npm start" (concurrently will do the rest for you and start both side as front than back)</li>
 </ol>
@@ -17,7 +17,12 @@ Install my-project with npm
 
 ## Enviroment Variables
 
-    You will need 3 env variables if you want to download it, REACT_APP_API_URL for the front, and SV_PORT and DATABASE_URL for the back :)
+    You will need 2 env variables if you want to download it, REACT_APP_API_URL for the front and DATABASE_URL for the back :)
+
+    (**FOR LOCAL TEST**)
+    Create .env in both dirs (frontend and backend)
+    1- In the frontend/.env paste this variable: REACT_APP_API_URL="http://localhost:4000"
+    2- In the backend/.env you will need to create the db in MySql, find the .sql file and load it in your local machine, generate the mysql URL after that add that URL into DATABASE_URL="yourURL"
 
 ## 🔗 Links
 
