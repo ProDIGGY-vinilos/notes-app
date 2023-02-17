@@ -128,7 +128,8 @@ const ListNotes = () => {
         }
       }
     }
-  }, [noteList, path]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (noteList === undefined) {
