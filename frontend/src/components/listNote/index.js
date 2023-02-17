@@ -32,29 +32,34 @@ const ListNotes = () => {
   }, []);
 
   const getNotes = async () => {
-    const response = await fetch(`http://localhost:4000/notes`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/notes`);
     const data = await response.json();
     setNoteList(data.data);
   };
 
   const getArchivedNotes = async () => {
-    const response = await fetch(`http://localhost:4000/notes/archived`);
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/notes/archived`
+    );
     const data = await response.json();
     setNoteList(data.data);
   };
 
   const archiveIn = async (note) => {
-    const response = await fetch(`http://localhost:4000/notes/${note.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: note.title,
-        description: note.description,
-        archived: 1,
-      }),
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/notes/${note.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: note.title,
+          description: note.description,
+          archived: 1,
+        }),
+      }
+    );
     const data = await response.json();
     filter(data.data.id);
     setToastMessage("Note archived successfully");
@@ -62,17 +67,20 @@ const ListNotes = () => {
   };
 
   const archiveOut = async (note) => {
-    const response = await fetch(`http://localhost:4000/notes/${note.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: note.title,
-        description: note.description,
-        archived: 0,
-      }),
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/notes/${note.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: note.title,
+          description: note.description,
+          archived: 0,
+        }),
+      }
+    );
     const data = await response.json();
     filter(data.data.id);
     setToastMessage("Note unarchived successfully");
@@ -85,12 +93,15 @@ const ListNotes = () => {
   };
 
   const deleteNote = async (id) => {
-    const response = await fetch(`http://localhost:4000/notes/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/notes/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const data = await response.json();
     filter(data.data.id);
     handleClose();

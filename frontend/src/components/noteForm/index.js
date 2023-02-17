@@ -32,14 +32,16 @@ const NoteForm = () => {
   }, []);
 
   const getOneNote = async () => {
-    const response = await fetch(`http://localhost:4000/notes/${noteID}`);
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/notes/${noteID}`
+    );
     const data = await response.json();
     note = data;
     reset(note.data);
   };
 
   const createNote = async (body) => {
-    const response = await fetch("http://localhost:4000/notes", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/notes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -59,16 +61,19 @@ const NoteForm = () => {
   };
 
   const editNote = async (body) => {
-    const response = await fetch(`http://localhost:4000/notes/${noteID}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: body.title,
-        description: body.description,
-      }),
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/notes/${noteID}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: body.title,
+          description: body.description,
+        }),
+      }
+    );
     const data = await response.json();
     setToastMessage(data.message);
     handleToastOpen();
