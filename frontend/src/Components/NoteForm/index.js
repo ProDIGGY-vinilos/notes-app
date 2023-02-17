@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
 import styles from "Components/NoteForm/noteForm.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Toast from "react-bootstrap/Toast";
 
 const NoteForm = () => {
+  const history = useHistory();
   const {
     register,
     handleSubmit,
@@ -77,14 +78,13 @@ const NoteForm = () => {
     const data = await response.json();
     setToastMessage(data.message);
     handleToastOpen();
-    handleToastOpen();
     setTimeout(() => {
       goBack();
     }, 2100);
   };
 
   const goBack = () => {
-    window.history.back();
+    history.push("/notes");
   };
 
   const onSubmit = (data) => {
