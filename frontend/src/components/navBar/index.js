@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./navBar.module.css";
+import styles from "Components/NavBar/navBar.module.css";
 
 const NavBar = () => {
   const [pageTitle, setPageTitle] = useState("Notes");

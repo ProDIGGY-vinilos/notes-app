@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import styles from "components/noteForm/noteForm.module.css";
+import styles from "Components/NoteForm/noteForm.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Toast from "react-bootstrap/Toast";

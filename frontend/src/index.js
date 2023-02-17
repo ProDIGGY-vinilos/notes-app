@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Routes from "routes/index";
-import NavBar from "components/navBar";
+import Routes from "Routes/index.js";
+import NavBar from "Components/NavBar/index.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,8 +1,8 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
-const NoteForm = lazy(() => import("components/noteForm/index.js"));
-const NoteList = lazy(() => import("components/listNote/index.js"));
+const NoteForm = lazy(() => import("Components/NoteForm/index.js"));
+const NoteList = lazy(() => import("Components/ListNote/index.js"));
 const Routes = () => {
   return (
     <BrowserRouter>

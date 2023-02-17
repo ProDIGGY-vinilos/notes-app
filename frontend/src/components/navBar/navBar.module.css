@@ -16,3 +16,22 @@
   margin: 0px 100px 0px 0px;
   text-transform: uppercase;
 }
+
+@media (max-width: 565px) {
+  .text {
+    margin: 0px 0px 0px 0px;
+  }
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 565px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}

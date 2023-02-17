@@ -1,9 +1,8 @@
-import styles from "components/listNote/listNotes.module.css";
+import styles from "Components/ListNote/listNotes.module.css";
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
-
 import {
   BiEdit,
   BiArchiveIn,
